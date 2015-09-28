@@ -1,0 +1,11 @@
+<% if current_user.admin %>
+  <%= @attractions.each do |att| %>
+    <h5><a href=<%= "/attractions/#{att.id}" %>>Show <%= "#{att.name}" %></a></h5><br>
+  <% end %>
+<% else %>
+  <%= @attractions.each do |att| %>
+    <h5><a href=<%= "/attractions/#{att.id}" %>>Go on <%= "#{att.name}" %></a></h5><br>
+  <% end %>
+<% end %>
+
+<%= link_to "New Attraction", new_attraction_path %>
