@@ -1,0 +1,28 @@
+<%= form_tag  do %>
+  <div class="field">
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+  <div class="field">
+    <%= label_tag :height, "Height (in inches)" %><br />
+    <%= text_field_tag :height %>
+  </div>
+  <div class="field">
+    <%= label_tag :happiness, "How happy are you? (1-5 scale)" %><br />
+    <%= text_field_tag :happiness %>
+  </div>
+  <div class="field">
+    <%= label_tag :nausea, "How nauseous are you? (1-5 scale)" %><br />
+    <%= text_field_tag :nausea %>
+  </div>
+  <div class="field">
+    <%= label_tag :tickets, "How many dollars are in your pocket?" %><br />
+    <%= text_field_tag :tickets %>
+  </div>
+  <div class="field">
+  <h5>Check box if you are a theme park owner <%= check_box_tag :admin, "Check box if you are a theme park owner" %></h5>
+   <br >
+  </div>
+  <%= button_to "Create User", new_user_path %>
+  <%link_to "Back", root_path%>
+<% end %>

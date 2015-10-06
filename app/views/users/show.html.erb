@@ -1,0 +1,16 @@
+<h6>Welcome to the theme park!</h6>
+
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
+
+<%= @user.admin ? "ADMIN" : "" %><br>
+Name:  <%= @user.name ? @user.name : "" %><br>
+Tickets: <%= @user.tickets ? @user.tickets : 0 %><br>
+Mood: <%= @user.happiness && @user.nausea ? @user.mood : "" %><br>Height: <%= @user.height ? @user.height : "" %><br>
+<%= link_to "See attractions", attractions_path %>
+
+<%if @user.admin%>
+  <%=link_to "New Attraction", new_attraction_path%>
+<%end%>
