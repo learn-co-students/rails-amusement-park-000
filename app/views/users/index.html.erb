@@ -1,0 +1,9 @@
+<h6>Welcome to the Theme Park</h6>
+
+<form accept-charset="UTF-8" action= '/users/test' method="post">
+   <select name="user[id]">
+      <%= @users.each do |user| %>
+        <option value="<%= user.id %>"><%= user.name %></option>
+      <% end %>
+    </select>
+   <input name="commit" type="submit" value="Sign In" />
